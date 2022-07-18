@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image";
 
 import Asset from "../../components/Asset";
 
@@ -18,7 +20,6 @@ import {
   useProfileData,
   useSetProfileData,
 } from "../../contexts/ProfileDataContext";
-import { Button, Image } from "react-bootstrap";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
@@ -53,7 +54,7 @@ function ProfilePage() {
         setProfilePosts(profilePosts);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     fetchData();
